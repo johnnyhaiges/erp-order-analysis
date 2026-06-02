@@ -1,4 +1,4 @@
-\# Northwind ERP Supply Chain Analytics
+## Northwind ERP Supply Chain  Data Analysis
 
 
 
@@ -6,7 +6,7 @@ Exploratory analysis of order fulfillment, late shipments, revenue distribution,
 
 
 
-\## Approach
+## Approach
 
 
 
@@ -14,91 +14,91 @@ Analyzed 16,261 historical orders across the Northwind dataset (SQLite, ERP-styl
 
 
 
-\## How to Run
+## How to Run
 
 
 
-Open `notebooks/northwind\_analysis.ipynb` → Cell → Run All.
+Open `notebooks/northwind_analysis.ipynb` → Cell → Run All.
 
 
 
-\## Key Findings
+## Key Findings
 
 
 
-\### Order Fulfillment
+### Order Fulfillment
 
-\- \*\*Average fulfillment time:\*\* 7.4 days across 16,261 orders
+- **Average fulfillment time:** 7.4 days across 16,261 orders
 
-\- \*\*High variance:\*\* standard deviation of 6.8 days, max 37 days, min 0 days — indicating inconsistent supply chain performance
+- **High variance:** standard deviation of 6.8 days, max 37 days, min 0 days — indicating inconsistent supply chain performance
 
-\- \*\*Median (5 days) < mean (7.4 days):\*\* a tail of very slow orders is dragging the average up, masking typical performance
+- **Median (5 days) < mean (7.4 days):** a tail of very slow orders is dragging the average up, masking typical performance
 
-\- \*\*Implication:\*\* fulfillment process is not effectively standardized; root-cause investigation warranted on the long-tail orders
-
-
-
-!\[Fulfillment time distribution](images/01\_fulfillment\_distribution.png)
+- **Implication:** fulfillment process is not effectively standardized; root-cause investigation warranted on the long-tail orders
 
 
 
-\### Late Shipments
-
-\- \*\*23% of orders were late\*\* — nearly 1 in 4
-
-\- \*\*18 percentage points above\*\* the commonly accepted industry benchmark
-
-\- \*\*Implication:\*\* significant operational gap; targeted intervention on shipping reliability is high-value
+![Fulfillment time distribution](images/01_fulfillment_distribution.png)
 
 
 
-!\[Late shipment rate](images/02\_late\_shipment\_rate.png)
+### Late Shipments
+
+- **23% of orders were late** — nearly 1 in 4
+
+- **18 percentage points above** the commonly accepted industry benchmark
+
+- **Implication:** significant operational gap; targeted intervention on shipping reliability is high-value
 
 
 
-\### Revenue by Product Category
-
-\- \*\*Beverages dominate at $92M\*\*, nearly 40% above second-place Confections ($66M)
-
-\- \*\*Grains/Cereals is the weakest category at $28M\*\* — suggests low demand, weak sales execution, or unfavorable cost structure
-
-\- \*\*Wide spread between top and bottom categories\*\* suggests inventory investment is skewed toward top performers (intentionally or otherwise)
+![Late shipment rate](images/02_late_shipment_rate.png)
 
 
 
-!\[Revenue by product category](images/03\_revenue\_by\_category.png)
+### Revenue by Product Category
+
+- **Beverages dominate at $92M**, nearly 40% above second-place Confections ($66M)
+
+- **Grains/Cereals is the weakest category at $28M** — suggests low demand, weak sales execution, or unfavorable cost structure
+
+- **Wide spread between top and bottom categories** suggests inventory investment is skewed toward top performers (intentionally or otherwise)
 
 
 
-\### Top 10 Customers
-
-\- \*\*B's Beverages leads at $6.15M\*\* — notably a beverage company concentrated in the most profitable category
-
-\- \*\*Tight top-10 grouping:\*\* only $700K gap between #1 and #10
-
-\- \*\*No single customer dominates\*\* — healthy diversification and low concentration risk
+![Revenue by product category](images/03_revenue_by_category.png)
 
 
 
-!\[Top 10 customers by revenue](images/04\_top\_10\_customers.png)
+### Top 10 Customers
+
+- **B's Beverages leads at $6.15M** — notably a beverage company concentrated in the most profitable category
+
+- **Tight top-10 grouping:** only $700K gap between #1 and #10
+
+- **No single customer dominates** — healthy diversification and low concentration risk
 
 
 
-\### Order Value vs Quantity (Linear Regression)
-
-\- \*\*R² = 0.15\*\* — quantity explains only 15% of order value
-
-\- \*\*Each additional unit ordered adds $28.85\*\* in value on average
-
-\- \*\*Pricing strategy drives revenue more than volume.\*\* The scatter reveals distinct pricing tiers per product, meaning \*what\* is ordered matters more than \*how much\*
+![Top 10 customers by revenue](images/04_top_10_customers.png)
 
 
 
-!\[Order value vs quantity regression](images/05\_regression\_scatter.png)
+### Order Value vs Quantity (Linear Regression)
+
+- **R² = 0.15** — quantity explains only 15% of order value
+
+- **Each additional unit ordered adds $28.85** in value on average
+
+- **Pricing strategy drives revenue more than volume.** The scatter reveals distinct pricing tiers per product, meaning *what* is ordered matters more than *how much*
 
 
 
-\## Dataset
+![Order value vs quantity regression](images/05_regression_scatter.png)
+
+
+
+## Dataset
 
 
 
@@ -106,7 +106,7 @@ Northwind SQLite database — a normalized relational dataset modeled after real
 
 
 
-\## Stack
+## Stack
 
 
 
@@ -114,13 +114,13 @@ Python, pandas, matplotlib, scikit-learn, SQLite.
 
 
 
-\## Repository
+## Repository
 
 ```
 
 data/        northwind.db
 
-notebooks/   northwind\_analysis.ipynb
+notebooks/   northwind_analysis.ipynb
 
 images/      finding visualizations
 
